@@ -1,0 +1,206 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.nav ul {
+  position: fixed;
+  width: 100vw;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  background-color: #444;
+  padding: 0;
+  margin: 0;
+}
+
+.nav div {
+  width: fit-content;
+}
+
+.nav .logo {
+  width: fit-content;
+  left: 0px;
+  font-size: 2em;
+  color: bisque;
+  padding: 10px;
+}
+
+.nav li {
+  font-family: "Oswald", sans-serif;
+  font-size: 1em;
+  line-height: 40px;
+  height: 40px;
+  padding-left: 10px;
+  border-bottom: 1px solid #888;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transition: 0.3s background-color;
+  text-align: center;
+}
+
+.nav a:hover {
+  background-color: #005f5f;
+}
+
+.nav a.active {
+  background-color: #fff;
+  color: #444;
+  cursor: default;
+}
+
+@media screen and (min-width: 600px) {
+  .nav li {
+    width: 120px;
+    border-bottom: none;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.4em;
+  }
+
+  /* Option 1 - Display Inline */
+  .nav li {
+    display: inline-block;
+    margin-right: -4px;
+  }
+}
+
+.background-image {
+  position: fixed;
+  z-index: -1;
+  top: 60px;
+  height: calc(100vh - 60px);
+  width: 100vw;
+  background: url(https://www.coffeeaddress.com/file/2020/01/07/new_home1_1_1_1_1.jpg)
+    center center no-repeat;
+  background-size: cover;
+}
+
+.login-card {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: bisque;
+  left: 50%;
+  top: 50%;
+  height: 400px;
+  width: 300px;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+  color: #444;
+  box-shadow: 5px 5px 5px rgba(59, 58, 56, 0.726);
+}
+
+.login-card a,
+button {
+  text-decoration: none;
+  font-size: 0.7em;
+  margin: 10px;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 7px;
+  background-color: teal;
+  border: transparent;
+  box-shadow: 2px 2px 2px rgba(0, 128, 128, 0.534);
+}
+
+button:hover {
+  background-color: rgba(6, 187, 187, 0.575);
+}
+
+input {
+  margin: 5px;
+  font-size: 0.5em;
+  font-family: Arial, Helvetica, sans-serif;
+  border: transparent;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.452);
+  border-radius: 5px;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu,
+.orders {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: bisque;
+  margin: 40px;
+  min-width: 400px;
+  width: 70vw;
+  font-size: 2em;
+  color: #444;
+  box-shadow: 5px 5px 5px rgba(59, 58, 56, 0.726);
+}
+
+.menu {
+  margin-top: 140px;
+}
+
+h1 {
+  font-size: 1.2em;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  font-size: 0.7em;
+}
+
+th,
+td {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: grey;
+}
+
+tr:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+td {
+  position: relative;
+}
+
+td:hover::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -9999px;
+  bottom: -9999px;
+  background-color: rgba(255, 255, 255, 0.4);
+  z-index: -1;
+}
+
+.add-menu-item,
+.edit-menu-item {
+  margin-bottom: 20px;
+}
